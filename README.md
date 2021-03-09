@@ -27,6 +27,11 @@ To set up the experimentation environment:
 4. Update the manifests in the `acm-configs\namespaces\tff` folder with your image tags and cluster names.
 5. Create the environment by executing the following command from the `terraform` folder.
 
+```
+terraform init
+terraform apply
+```
+
 As noted, the JupyterLab server is not exposed through an external IP address. To access the JupyterLab server you have two options:
 
 1. Modify the `acm-configs/namespaces/tff/jupyterlab-service.yaml` manifest to use LoadBalancer rather than ClusterIP
